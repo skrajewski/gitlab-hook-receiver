@@ -1,0 +1,4 @@
+*.log
+test.php
+vendor/
+.idea/

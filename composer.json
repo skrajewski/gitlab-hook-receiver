@@ -1,0 +1,21 @@
+{
+    "name": "Szykra/hooker",
+    "description": "GitLab hook receiver",
+    "authors": [
+        {
+            "name": "Szymon Krajewski",
+            "email": "Szykra@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpspec/phpspec": "~2.0",
+        "monolog/monolog": "~1.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "Szykra\\": "src/Szykra"
+        }
+    },
+    "license": "MIT",
+    "minimum-stability": "dev"
+}
