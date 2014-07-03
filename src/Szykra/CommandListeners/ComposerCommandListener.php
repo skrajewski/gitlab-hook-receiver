@@ -20,10 +20,10 @@ class ComposerCommandListener extends AbstractCommandListener {
             $arr = [];
             preg_match_all("/\\[(.*?):(.*?)\\]/", $commit['message'], $arr);
 
-            $command = $arr[2][0];
-
             if( ! empty($arr[1]) && $arr[1][0] == "composer" && ! empty($command))
             {
+                $command = $arr[2][0];
+
                 $this->logger->notice("Composer ". $command ." start...");
                 $output = shell_exec('composer --no-interaction '. $command);
                 $this->logger->notice($output);
@@ -32,6 +32,8 @@ class ComposerCommandListener extends AbstractCommandListener {
                 return;
             }
         }
+
+        $this->logger->notice('End Composer Hook');
 
         return true;
     }
