@@ -16,6 +16,16 @@ abstract class AbstractCommandListener {
     }
 
     /**
+     * @param        $msg
+     * @param string $level
+     * @param array  $context
+     */
+    protected function log($msg, $level = 'NOTICE', $context = [])
+    {
+        $this->logger->log($level, $msg, $context);
+    }
+
+    /**
      * @param $data
      * @return mixed
      */

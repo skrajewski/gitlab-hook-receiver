@@ -21,10 +21,10 @@ class GitPullCommandListener extends AbstractCommandListener {
      */
     public function run($data)
     {
-        $this->logger->notice('Start Git Pull Hook');
+        $this->log('Start git pull command listener');
         $output = shell_exec('cd '. $this->repositoryPath .' && git pull');
-        $this->logger->notice($output);
-        $this->logger->notice('Actual commit: '. $data['after']);
-        $this->logger->notice('Git pull complete.');
+        $this->log($output);
+        $this->log('Actual commit: '. $data['after']);
+        $this->log('End git pull command listener.');
     }
 }

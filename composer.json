@@ -1,11 +1,11 @@
 {
     "name": "szykra/gitlab-hook-receiver",
     "description": "Easy way to configure task after Gitlab `on push` hook.",
-    "version": "dev-master",
+    "version": "0.1.0",
     "authors": [
         {
             "name": "Szymon Krajewski",
-            "email": "Szykra@gmail.com"
+            "email": "szykra@gmail.com"
         }
     ],
     "require": {
