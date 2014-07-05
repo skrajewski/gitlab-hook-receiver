@@ -8,6 +8,19 @@ class ComposerCommandListener extends AbstractCommandListener {
     protected $command = "composer";
 
     /**
+     * @var string
+     */
+    protected $directory;
+
+    /**
+     * @param $directory
+     */
+    function __construct($directory)
+    {
+        $this->directory = $directory;
+    }
+
+    /**
      * @param $data
      * @return bool
      */
@@ -27,7 +40,7 @@ class ComposerCommandListener extends AbstractCommandListener {
             $command = $find[2][$key];
 
             $this->log("Composer " .$command. " start...");
-            $output = shell_exec('composer --no-interaction ' . $command);
+            $output = shell_exec('cd '. $this->directory .' && composer --no-interaction ' . $command);
             $this->log($output);
             $this->log("Composer " .$command. " is done.");
 
