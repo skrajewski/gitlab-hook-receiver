@@ -9,7 +9,16 @@ It's a simple set of class to help create GitLab POST Hook. At this moment it su
 ## How it works?
 Imagine you have a project in VCS. Always when you push commits to the master branch your production server automatically pull all changes. Are you use composer? You can transfer special command through commit message to run `composer install` on production. See example.
 
-###Example
+## Install
+Install via composer or put it directly to `composer.json` file and run `composer update`.
+
+```
+require: {
+    "szykra/gitlab-hook-receiver": "0.1.*"
+}
+```
+
+##Example
 ```php
 $directory = '/path/to/your/project/directory';
 
